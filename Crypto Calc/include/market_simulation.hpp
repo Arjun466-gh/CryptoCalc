@@ -3,8 +3,10 @@
 
 #include <vector>
 
-// Function declarations
+// Function to load historical price data from a file
 std::vector<double> loadHistoricalData();
+
+// Function to calculate the moving average of given price data
 double calculateMovingAverage(const std::vector<double>& prices);
 
 #endif
