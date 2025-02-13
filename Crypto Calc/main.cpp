@@ -5,30 +5,41 @@
 using namespace std;
 
 int main() {
-    // User inputs
-    double investment, buyPrice, sellPrice;
-    int numCoins;
+    int choice;
+    
+    do {
+        cout << "\nCrypto Investment Calculator\n";
+        cout << "1. Calculate Profit/Loss\n";
+        cout << "2. Market Prediction\n";
+        cout << "3. Exit\n";
+        cout << "Choose an option: ";
+        cin >> choice;
 
-    cout << "Enter initial investment amount: $";
-    cin >> investment;
+        if (choice == 1) {
+            double investment, buyPrice, sellPrice;
+            int numCoins;
 
-    cout << "Enter number of coins purchased: ";
-    cin >> numCoins;
+            cout << "Enter initial investment: $";
+            cin >> investment;
 
-    cout << "Enter buying price per coin: $";
-    cin >> buyPrice;
+            cout << "Enter number of coins: ";
+            cin >> numCoins;
 
-    cout << "Enter expected selling price per coin: $";
-    cin >> sellPrice;
+            cout << "Enter buying price: $";
+            cin >> buyPrice;
 
-    // Calculate profit/loss
-    double profitLoss = calculateProfitLoss(investment, buyPrice, sellPrice, numCoins);
-    displayResults(profitLoss);
+            cout << "Enter expected selling price: $";
+            cin >> sellPrice;
 
-    // Market prediction using moving averages
-    vector<double> historicalPrices = loadHistoricalData();
-    double avgPrice = calculateMovingAverage(historicalPrices);
-    cout << "Predicted average market price: $" << avgPrice << endl;
+            double profitLoss = calculateProfitLoss(investment, buyPrice, sellPrice, numCoins);
+            displayResults(profitLoss);
+        } 
+        else if (choice == 2) {
+            vector<double> prices = loadHistoricalData();
+            double avg = calculateMovingAverage(prices);
+            cout << "Predicted average market price: $" << avg << endl;
+        }
+    } while (choice != 3);
 
     return 0;
 }
