@@ -1,4 +1,23 @@
-/build
-*.o
+# Ignore compiled files
 *.exe
+*.o
+*.out
+*.obj
+
+# Ignore build directories
+/build
+/bin
+/Debug
+/Release
+
+# Ignore editor and OS-generated files
 .vscode/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Ignore cache and dependency files
+*.cache
+*.pyc
+*.class
