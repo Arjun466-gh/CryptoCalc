@@ -17,4 +17,5 @@ CryptoCalc is a **C++ program** that calculates the profit/loss of a cryptocurre
 4. A moving average is calculated to estimate market trends. 
 
 ## Video Presentation 
-Watch the project walkthrough on YouTube: https://www.youtube.com/watch?v=fncCcQmhe2o
+Watch the project walkthrough on YouTube: https://www.youtube.com/watch?v=A2_pG9OgIqw
+
