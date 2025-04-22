@@ -18,4 +18,3 @@ CryptoCalc is a **C++ program** that calculates the profit/loss of a cryptocurre
 
 ## Video Presentation 
 Watch the project walkthrough on YouTube: https://www.youtube.com/watch?v=A2_pG9OgIqw
-
