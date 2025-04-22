@@ -24,3 +24,9 @@ CMakeCache.txt
 cmake_install.cmake
 Makefile
 build/
+
+# Visual Studio folders and settings
+.vs/
+*.sln
+*.vcxproj*
+*.sqlite
