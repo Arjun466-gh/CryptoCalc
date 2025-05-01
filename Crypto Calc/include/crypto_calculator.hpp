@@ -1,10 +1,13 @@
 #ifndef CRYPTO_CALCULATOR_HPP
 #define CRYPTO_CALCULATOR_HPP
 
-// Function to calculate profit or loss from a cryptocurrency trade
-double calculateProfitLoss(double investment, double buyPrice, double sellPrice, int numCoins);
+#include <string>
+#include <map>
 
-// Function to display the calculated profit or loss
-void displayResults(double profitLoss);
+class CryptoCalculator {
+public:
+    double convertCurrency(const std::string& from, const std::string& to, double amount);
+    void displayRate(const std::string& currency);
+};
 
 #endif
