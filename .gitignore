@@ -30,3 +30,12 @@ build/
 *.sln
 *.vcxproj*
 *.sqlite
+
+# Ignore all Visual Studio folders and files
+.vs/
+.vs/**
+
+# Ignore build output, solution files, and project files
+*.sln
+*.vcxproj*
+*.sqlite
