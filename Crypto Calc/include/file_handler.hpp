@@ -4,10 +4,9 @@
 #include "transaction.hpp"
 #include <vector>
 #include <string>
+#include <memory>
 
-bool loadHistoricalPrices(const std::string& filename, std::vector<double>& prices);
-bool saveTransactionsToText(const std::string& filename, const std::vector<Transaction>& transactions);
-bool saveTransactionsToBinary(const std::string& filename, const std::vector<Transaction>& transactions);
-bool loadTransactionsFromBinary(const std::string& filename, std::vector<Transaction>& transactions);
+bool saveTransactionsToText(const std::string& filename, const std::vector<std::shared_ptr<Transaction>>& transactions);
+bool saveTransactionsToBinary(const std::string& filename, const std::vector<std::shared_ptr<Transaction>>& transactions);
 
-#endif 
+#endif
