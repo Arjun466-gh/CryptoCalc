@@ -1,15 +1,26 @@
 #include "crypto_calculator.hpp"
 #include <iostream>
 
-using namespace std;
-
-// Function to calculate profit or loss
-// Formula: (Selling Price - Buying Price) * Number of Coins
 double calculateProfitLoss(double investment, double buyPrice, double sellPrice, int numCoins) {
-    return (sellPrice - buyPrice) * numCoins;
+    double totalCost = buyPrice * numCoins;
+    double totalReturn = sellPrice * numCoins;
+    return totalReturn - totalCost;
 }
 
-// Function to display the profit/loss result
 void displayResults(double profitLoss) {
-    cout << "Your estimated profit/loss: $" << profitLoss << endl;
+    if (profitLoss >= 0)
+        std::cout << "Profit: $" << profitLoss << std::endl;
+    else
+        std::cout << "Loss: $" << -profitLoss << std::endl;
+}
+
+double calculatePortfolioValue(const std::vector<std::shared_ptr<Transaction>>& transactions) {
+    double total = 0;
+    for (const auto& tx : transactions) {
+        if (tx->type == TransactionType::BUY)
+            total += tx->quantity * tx->pricePerCoin;
+        else
+            total -= tx->quantity * tx->pricePerCoin;
+    }
+    return total;
 }
