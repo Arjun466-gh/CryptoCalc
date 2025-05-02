@@ -1,0 +1,4 @@
+BUY,Bitcoin,3,65000
+SELL,Ethereum,2,3100
+BUY,Litecoin,5,180
+SELL,Dogecoin,1000,0.09
