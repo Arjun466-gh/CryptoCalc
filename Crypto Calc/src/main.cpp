@@ -1,34 +1,20 @@
 #include "crypto_calculator.hpp"
+#include "file_handler.hpp"
 #include "market_simulation.hpp"
+#include "transaction.hpp"
+
 #include <iostream>
 #include <vector>
-
-using namespace std;
+#include <memory>
 
 int main() {
-    double investment, buyPrice, sellPrice;
-    int numCoins;
+    std::vector<std::shared_ptr<Transaction>> portfolio;
 
-    // Get user input for investment details
-    cout << "Enter initial investment amount: $";
-    cin >> investment;
-    cout << "Enter number of coins purchased: ";
-    cin >> numCoins;
-    cout << "Enter buying price per coin: $";
-    cin >> buyPrice;
-    cout << "Enter expected selling price per coin: $";
-    cin >> sellPrice;
+    // Example dummy transaction
+    portfolio.push_back(std::make_shared<Transaction>("Bitcoin", 2, 30000, TransactionType::BUY));
 
-    // Calculate and display profit/loss
-    double profitLoss = calculateProfitLoss(investment, buyPrice, sellPrice, numCoins);
-    displayResults(profitLoss);
-
-    // Load historical market prices and calculate moving average
-    vector<double> historicalPrices = loadHistoricalData();
-    double avgPrice = calculateMovingAverage(historicalPrices);
-
-    // Display predicted market price based on moving average
-    cout << "Predicted average market price: $" << avgPrice << endl;
+    double portfolioValue = calculatePortfolioValue(portfolio);
+    std::cout << "Current Portfolio Value: $" << portfolioValue << std::endl;
 
     return 0;
 }
