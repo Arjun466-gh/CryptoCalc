@@ -36,7 +36,7 @@ CryptoCalc is a C++ program that helps users simulate cryptocurrency transaction
 - Improved version control with frequent, meaningful commits
 
 ## Video Presentation 
-Watch the project walkthrough on YouTube: https://www.youtube.com/watch?v=A2_pG9OgIqw
+Watch the project walkthrough on YouTube: https://youtu.be/JIqR_T90lMM?si=Ba9TrvZlRZDqkIZR 
 
 ## Test
 - mkdir build
